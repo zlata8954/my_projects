@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-rows: 20% 1fr 1fr 25%;
+            grid-template-columns: 32% 32% 1fr 1fr;
+            height: 90vh;
+            width: 90vw;
+            grid-gap: 10px;
+            text-align: center;
+            font-weight: bolder;
+            padding-top: 20px;
+            padding-left: 70px;
+        }
+
+        .header {
+            background-color: lightslategrey;
+            grid-area: 1/1/2/5;
+        }
+
+        .main {
+            background-color: sandybrown;
+        }
+
+        .header,
+        .area-1,
+        .area-2,
+        .area-3,
+        .sidebar-right,
+        .footer {
+            padding: 60px;
+        }
+
+        .area-3 {
+            grid-area: 3/1/4/3;
+        }
+
+        .sidebar-right {
+            grid-area: 2/3/4/5;
+            background-color: palegreen;
+        }
+
+        .footer {
+            background-color: lightgrey;
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-rows: 100%;
+            grid-template-columns: repeat(4, 25%);
+            width: 90vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Шапка страницы</div>
+        <div class="main area-1">Область 1</div>
+        <div class="main area-2">Область 2</div>
+        <div class="main area-3">Область 3</div>
+        <div class="sidebar-right">Боковая область</div>
+        <div class="container2">
+            <div class="footer">Секция футера 1</div>
+            <div class="footer">Секция футера 2</div>
+            <div class="footer">Секция футера 3</div>
+            <div class="footer">Секция футера 4</div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
