@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaslesVPN</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <style>
+        .grid-1 {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 10% 2% repeat(5, 1fr) 8% 8%;
+            max-width: 100vw;
+            justify-items: center;
+            padding: 20px;
+        }
+
+        .menu {
+            font-family: 'Rubik', sans-serif;
+            padding: 15px;
+        }
+
+        .logo {
+            grid-area: 1/1/2/2;
+        }
+
+        .company-name {
+            grid-area: 1/2/2/3;
+            font-family: 'Rubik', sans-serif;
+            font-weight: bolder;
+            padding: 15px;
+        }
+
+        .menu-item1 {
+            grid-area: 1/3/2/4;
+        }
+
+        .menu-item2 {
+            grid-area: 1/4/2/5;
+        }
+
+        .menu-item3 {
+            grid-area: 1/5/2/6;
+        }
+
+        .menu-item4 {
+            grid-area: 1/6/2/7;
+        }
+
+        .menu-item5 {
+            grid-area: 1/7/2/8;
+        }
+
+        .sign-in__sign-in-button {
+            font-family: 'Rubik', sans-serif;
+            font-weight: bolder;
+            padding: 15px;
+            grid-area: 1/8/2/9;
+        }
+
+        .sign-up__sign-up-button {
+            font-family: 'Rubik', sans-serif;
+            font-weight: bolder;
+            border: 2px solid lightcoral;
+            border-radius: 15px;
+            padding: 15px;
+            grid-area: 1/9/2/10;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-rows: 50% 20% 1fr;
+            grid-template-columns: 1fr 1fr;
+            max-width: 100vw;
+            padding: 25px;
+            margin-left: 5%;
+        }
+
+        .text {
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .text-area1 {
+            font-size: 50px;
+            grid-area: 1/1/2/2;
+        }
+
+        .text-area2 {
+            font-size: 16px;
+            grid-area: 2/1/3/2;
+        }
+
+        .get-started-button {
+            font-family: 'Rubik', sans-serif;
+            font-size: 16px;
+            font-weight: bolder;
+            color: white;
+            grid-area: 3/1/4/2;
+        }
+
+        .illustration-1 {
+            grid-area: 1/2/4/3;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 80vw;
+            justify-items: center;
+            padding: 30px;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+        .user-icon {
+            grid-area: 1/1/2/2;
+        }
+
+        .locations-icon {
+            grid-area: 1/2/2/3;
+        }
+
+        .server-icon {
+            grid-area: 1/3/2/4;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-rows: repeat(3, 20%);
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 100vw;
+            justify-items: left;
+            padding: 30px;
+            margin-top: 10%;
+        }
+
+        .illustration-2 {
+            grid-area: 1/1/4/2;
+        }
+
+        .text-area3 {
+            grid-area: 1/2/2/3;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+
+        .text-area4 {
+            grid-area: 2/2/3/3;
+            font-size: 18px;
+        }
+
+        .bulleted-list {
+            grid-area: 3/2/4/3;
+            font-family: 'Rubik', sans-serif;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .grid-1 {
+                display: grid;
+                grid-template-rows: 1fr 40% 1fr;
+                grid-template-columns: 15% repeat(4, 1fr);
+                max-width: 100vw;
+                justify-items: center;
+                padding: 20px;
+            }
+
+            .company-name {
+                grid-area: 2/1/3/2;
+                font-size: 3.755vw;
+                padding: 15px;
+            }
+
+
+            .menu-item1 {
+                grid-area: 3/1/4/2;
+            }
+
+            .menu-item2 {
+                grid-area: 3/2/4/3;
+            }
+
+            .menu-item3 {
+                grid-area: 3/3/4/4;
+            }
+
+            .menu-item4 {
+                grid-area: 3/4/4/5;
+            }
+
+            .menu-item5 {
+                display: none;
+            }
+
+            .sign-in__sign-in-button {
+                padding: 10px;
+                grid-area: 1/3/2/4;
+            }
+
+            .sign-up__sign-up-button {
+                border: 1px solid lightcoral;
+                border-radius: 15px;
+                padding: 10px;
+                grid-area: 1/4/2/5;
+            }
+
+            .illustration-1 {
+                display: none;
+            }
+
+            .grid-3 {
+                max-width: 100vw;
+                padding: 20px;
+                margin-left: 10px;
+            }
+
+            .grid-4 {
+                display: grid;
+                grid-template-rows: 50% 25% repeat(2, 1fr);
+                grid-template-columns: 1fr;
+                max-width: 100vw;
+                justify-items: left;
+                padding: 30px;
+                margin-top: 13%
+            }
+
+            .illustration-2 {
+                grid-area: 1/1/2/2;
+                width: 350px;
+                height: 300px;
+            }
+
+            .text-area3 {
+                grid-area: 2/1/3/2;
+                font-size: 35px;
+                font-weight: bolder;
+            }
+
+            .text-area4 {
+                grid-area: 3/1/4/2;
+                font-size: 16px;
+            }
+
+            .bulleted-list {
+                grid-area: 4/1/5/2;
+                font-family: 'Rubik', sans-serif;
+                font-size: 14px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="grid-1">
+            <div><img class="logo" src="assets/images/Logo-vector.svg" alt="logo-pic">
+            </div>
+            <div class="company-name">LaslesVPN</div>
+            <div class="menu menu-item1">About</div>
+            <div class="menu menu-item2">Features</div>
+            <div class="menu menu-item3">Pricing</div>
+            <div class="menu menu-item4">Testimonials</div>
+            <div class="menu menu-item5">Help</div>
+            <div class="sign-in__sign-in-button">Sign In</div>
+            <div class="sign-up__sign-up-button">Sign Up</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="grid-2">
+            <p class="text text-area1">Want anything to be easy with LaslesVPN.</p>
+            <p class="text text-area2">Provide a network for all your needs with ease and fun using LaslesVPN discover
+                interesting features from
+                us.</p>
+            <img class="get-started-button" src="assets/images/get-started1.svg" alt="get started">
+            <img class="illustration-1" src="assets/images/Illustration_jpg.jpg" alt="picture">
+        </div>
+        <div class="grid-3">
+
+            <div><object class="user-icon" type="image/png" data="assets/images/user-icon-png.png"></object>
+                <object class="user-icon" type="image/png" data="assets/images/Group.png"></object></div>
+            <div> <object class="locations-icon" type="image/png" data="assets/images/location.png"></object>
+                <object class="locations-icon" type="image/png" data="assets/images/Group2.png"></object></div>
+            <div> <object class="server-icon" type="image/png" data="assets/images/Server.png"></object>
+                <object class="locations-icon" type="image/png" data="assets/images/Group3.png"></object></div>
+        </div>
+
+        <div class="grid-4">
+            <p class="text text-area3">
+                We Provide Many Features You Can Use
+            </p>
+            <p class="text text-area4">You can explore the features that we provide with fun and have their own
+                functions each feature.</p>
+            <div class="bulleted-list">
+                <ul>
+                    <li>Powerfull online protection.</li>
+                    <li>Internet without borders.</li>
+                    <li>Supercharged VPN</li>
+                    <li>No specific time limits.</li>
+                </ul>
+            </div>
+            <div><object class="illustration-2" type="image/png" data="assets/images/Illustration-2.png"></object></div>
+        </div>
+    </main>
+</body>
+
+</html>

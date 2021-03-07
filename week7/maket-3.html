@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+            background-color: lightslategrey;
+            width: 100vw;
+            height: 15vh;
+            text-align: center;
+            font-weight: bolder;
+            padding-top: 10px;
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: 35% 35% 1fr;
+            grid-template-rows: 40% 40%;
+            width: 100vw;
+            height: 60vh;
+            background-color: moccasin;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .sidebar-right {
+            background-color: palegreen;
+            height: 60vh;
+        }
+
+
+        .main {
+            margin-top: 15%;
+            margin-left: 5%;
+            margin-right: 5%;
+            background-color: sandybrown;
+        }
+
+        .area-3 {
+            width: 66vw;
+        }
+
+        @media screen and (min-width:1024px) {
+            .container2 {
+                display: grid;
+                grid-template-rows: 60%;
+                grid-template-columns: repeat(4, 25%);
+                width: 100vw;
+                height: 12vw;
+                background-color: grey;
+                justify-items: center;
+            }
+        }
+
+        @media screen and (max-width:599px) {
+            .footer {
+                display: none;
+            }
+
+            .container {
+                height: 10vh;
+                width: 100vw;
+            }
+
+            .container1 {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 1fr);
+                width: 100vw;
+                height: 100vh;
+                background-color: moccasin;
+                text-align: center;
+                font-weight: bolder;
+            }
+
+            .area-1 {
+                height: 80%;
+                width: 100%;
+                grid-area: 1/1/2/2;
+
+            }
+
+            .area-2 {
+                height: 80%;
+                width: 100vw;
+                grid-area: 2/1/3/2;
+                margin-top: 0px;
+            }
+
+            .area-3 {
+                height: 80%;
+                width: 100%;
+                grid-area: 3/1/4/2;
+            }
+
+            .sidebar-right {
+                height: 80%;
+                width: 100%;
+                grid-area: 4/1/5/2;
+                margin-top: 0px;
+            }
+
+            .main {
+                margin-top: 10px;
+                margin-left: 0px;
+                background-color: sandybrown;
+            }
+        }
+
+        .section-1,
+        .section-2,
+        .section-3,
+        .section-4 {
+
+            background-color: lavender;
+            margin-top: 6%;
+            width: 60%;
+            height: 100%;
+            text-align: center;
+            font-weight: bolder;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Шапка страницы</div>
+    </div>
+    <div class="container1">
+        <div class="main area-1">Область 1</div>
+        <div class="main area-2">Область 2</div>
+
+        <div class="sidebar-right">Боковая область</div>
+        <div class="main area-3">Область 3</div>
+    </div>
+    <div class="container2">
+        <div class="footer section-1">Секция футера 1</div>
+        <div class="footer section-2">Секция футера 2</div>
+        <div class="footer section-3">Секция футера 3</div>
+        <div class="footer section-4">Секция футера 4</div>
+    </div>
+
+</body>
+
+</html>
