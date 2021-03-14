@@ -1,0 +1,126 @@
+.upper-block {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3% 85% 1fr;
+    margin-left: 20px;
+}
+
+.upper-block__logo {
+    grid-area: 1/1/2/2;
+    margin-top: 10px;
+}
+
+.upper-block__title {
+    font-family: 'Roboto Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    grid-area: 1/2/2/3;
+}
+
+.upper-block__cart-button {
+    grid-area: 1/3/2/4;
+    margin-top: 10px;
+}
+
+.middle-block-1 {
+    display: grid;
+    grid-template-rows: 30% 20% 1fr 10%;
+    grid-template-columns: 40% 1fr;
+    column-gap: 100px;
+    margin: 20px;
+}
+
+.middle-block-1__title {
+    grid-area: 1/1/2/2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+.middle-block-1__text {
+    grid-area: 2/1/3/2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.middle-block-1__buy-button {
+    grid-area: 3/1/4/2;
+}
+
+.middle-block-1__picture-1 {
+    grid-area: 1/2/5/3;
+}
+
+.menu a {
+    padding: 15px;
+    grid-area: 4/1/5/2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #5222D0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .upper-block {
+        display: grid;
+        width: 100vw;
+        grid-template-rows: 1fr;
+        grid-template-columns: 10% 50% 1fr;
+        grid-gap: 5px;
+    }
+
+    .upper-block__title {
+        font-weight: bolder;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    .middle-block-1 {
+        display: grid;
+        grid-template-rows: 45% 20% 15% 10% 10%;
+        grid-template-columns: 1fr;
+        margin: 0px auto;
+        align-items: center;
+    }
+
+    .middle-block-1__picture-1 {
+        grid-area: 1/1/2/2;
+        width: 290px;
+        height: 230px;
+        justify-self: center;
+    }
+
+    .middle-block-1__title {
+        grid-area: 2/1/3/2;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
+    .middle-block-1__text {
+        grid-area: 3/1/4/2;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+
+    .middle-block-1__buy-button {
+        grid-area: 4/1/5/2;
+        width: 130px;
+        height: 40px;
+    }
+
+    .menu a {
+        padding: 3px;
+        grid-area: 4/1/5/2;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+        color: #5222D0;
+
+    }
+}
