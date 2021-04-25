@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br><br>
+
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+    <button onclick="multiplication()">X</button>
+    <button onclick="division()">/</button>
+
+    <script>
+        function plus() {
+            let a = prompt("Первое число?");
+            let b = prompt("Второе число?");
+
+            alert(Number(a) + Number(b));
+        }
+
+        function minus() {
+            let a = prompt("Первое число?");
+            let b = prompt("Второе число?");
+
+            alert(Number(a) - Number(b));
+        }
+
+        function multiplication() {
+            let a = prompt("Первое число?");
+            let b = prompt("Второе число?");
+
+            alert(Number(a) * Number(b));
+        }
+
+        function division() {
+            let a = prompt("Первое число?");
+            let b = prompt("Второе число?");
+
+            alert(Number(a) / Number(b));
+        }
+    </script>
+</body>
+
+</html>
