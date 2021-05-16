@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 20px;
+            border: 1px solid grey;
+            float: right;
+            margin-right: 67%;
+        }
+    </style>
+</head>
+
+<body>
+    <br><br>
+    <input id="num1plus" />
+    +
+    <input id="num2plus" />
+    <button onclick="plus()">Равно</button>
+
+    <div id="result-addition"></div>
+    <br><br>
+    <input id="num1minus" />
+    -
+    <input id="num2minus" />
+    <button onclick="minus()">Равно</button>
+
+    <div id="result-subtraction"></div>
+    <br><br>
+    <input id="num1multiply" />
+    *
+    <input id="num2multiply" />
+    <button onclick="multiply()">Равно</button>
+
+    <div id="result-multiplication"></div>
+    <br><br>
+    <input id="num1divide" />
+    /
+    <input id="num2divide" />
+    <button onclick="divide()">Равно</button>
+
+    <div id="result-division"></div>
+    <br><br>
+    <script>
+        function plus() {
+            let num1plus = Number(document.getElementById("num1plus").value);
+            let num2plus = Number(document.getElementById("num2plus").value);
+            let result = num1plus + num2plus;
+
+            document.getElementById("result-addition").innerHTML = result;
+        }
+
+        function minus() {
+            let num1minus = Number(document.getElementById("num1minus").value);
+            let num2minus = Number(document.getElementById("num2minus").value);
+            let result = num1minus - num2minus;
+
+            document.getElementById("result-subtraction").innerHTML = result;
+        }
+
+        function multiply() {
+            let num1multiply = Number(document.getElementById("num1multiply").value);
+            let num2multiply = Number(document.getElementById("num2multiply").value);
+            let result = num1multiply * num2multiply;
+
+            document.getElementById("result-multiplication").innerHTML = result;
+        }
+
+        function divide() {
+            let num1divide = Number(document.getElementById("num1divide").value);
+            let num2divide = Number(document.getElementById("num2divide").value);
+            let result = num1divide / num2divide;
+
+            document.getElementById("result-division").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
